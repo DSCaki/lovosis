@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import colors from 'tailwindcss/colors';
+import colors from "tailwindcss/colors";
 export default {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
@@ -14,7 +14,7 @@ export default {
       white: "#ffffff",
       gray: colors.gray,
       indigo: colors.indigo,
-      neutral: colors.neutral,  // Used mainly for text color
+      neutral: colors.neutral, // Used mainly for text color
       yellow: {
         50: "#fefce8",
         100: "#fef9c3",
@@ -28,11 +28,33 @@ export default {
         400: "#fa5a15",
         500: "#e14d0b",
         600: "#ea580c",
+      },
+      teal: {
+        600: "#3D958E",
+      },
+      blue: {
+        600: "#1E7DB6",
       }, // Primary colors, used mainly for links, buttons and svg icons
       red: colors.red, // Used for bookmark icon
       zinc: colors.zinc, // Used mainly for box-shadow
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        "fade-in-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-40px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-in-left": "fade-in-left 1s ease-out forwards",
+      },
+    },
   },
   plugins: [
     require("tailwindcss/nesting"),

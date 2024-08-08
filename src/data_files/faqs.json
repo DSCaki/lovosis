@@ -2,28 +2,32 @@
   "subTitle": "Ask us anything about our brand and products, and get factual responses.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What services does Lovosis provide?",
+      "answer": "Lovosis specializes in custom fabrication and surveillance solutions. We provide comprehensive IT solutions tailored to your specific needs, including installation, maintenance, and support for surveillance systems. Our offerings include renowned brands such as Hikvision, Dahua, and UNV."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "What types of surveillance systems do you offer?",
+      "answer": "We offer a variety of surveillance systems including CCTV cameras, IP cameras, video door phones,NVR, DVR and integrated security systems. Our solutions are designed to provide maximum security and monitoring capabilities."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "Do you offer maintenance services for surveillance systems?",
+      "answer": "Absolutely. We provide ongoing maintenance and support services to ensure your surveillance systems are always operating at their best. This includes regular check-ups, troubleshooting, and upgrades as necessary."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "Do you offer IT support and consulting?",
+      "answer": "Yes, we provide both IT support and consulting services. Our team of experts is available to assist with any IT-related issues and to offer strategic advice to improve your IT infrastructure."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "What brands of surveillance equipment do you offer?",
+      "answer": "We offer a range of high-quality surveillance equipment from leading brands such as Hikvision, Dahua, and UNV. These brands are known for their reliability, advanced features, and superior performance."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "Can Lovosis handle large-scale projects?",
+      "answer": "Yes, we have the expertise and resources to handle projects of any scale. Whether you need a small custom setup or a large-scale surveillance and IT solution, we can deliver high-quality results on time and within budget."
+    },
+    {
+      "question": "How can I request a quote for your services?",
+      "answer": "You can request a quote by contacting us through our website, emailing us at [email address], or calling our office at [phone number]. We'll be happy to discuss your needs and provide a detailed quote."
     }
   ]
 }

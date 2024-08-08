@@ -43,6 +43,20 @@ export const Icons = {
     height: 48,
     viewBox: "0 -960 960 960",
   },
+
+  cctv: {
+    paths: [
+      {
+        d: "M20.916 9.564a.998.998 0 0 0-.513-1.316L7.328 2.492c-.995-.438-2.22.051-2.645 1.042l-2.21 5.154a2.001 2.001 0 0 0 1.052 2.624L9.563 13.9L8.323 17H4v-3H2v8h2v-3h4.323c.823 0 1.552-.494 1.856-1.258l1.222-3.054l5.205 2.23a1 1 0 0 0 1.31-.517l.312-.71l1.701.68l2-5l-1.536-.613zm-4.434 5.126L4.313 9.475l2.208-5.152l12.162 5.354z",
+      },
+    ],
+    class:
+      "mt-2 h-6 w-6 flex-shrink-0 fill-neutral-700 hs-tab-active:fill-teal-600 dark:fill-neutral-300 dark:hs-tab-active:fill-blue-600 md:h-7 md:w-7",
+    width: 48,
+    height: 48,
+    viewBox: "0 0 24 24",
+  },
+
   tools: {
     paths: [
       {
@@ -50,7 +64,7 @@ export const Icons = {
       },
     ],
     class:
-      "mt-2 h-6 w-6 flex-shrink-0 fill-neutral-700 hs-tab-active:fill-orange-400 dark:fill-neutral-300 dark:hs-tab-active:fill-orange-300 md:h-7 md:w-7",
+      "mt-2 h-6 w-6 flex-shrink-0 fill-neutral-700 hs-tab-active:fill-teal-600 dark:fill-neutral-300 dark:hs-tab-active:fill-blue-600 md:h-7 md:w-7",
     width: 48,
     height: 48,
     viewBox: "0 -960 960 960",
@@ -58,14 +72,14 @@ export const Icons = {
   dashboard: {
     paths: [
       {
-        d: "M510-570v-270h330v270H510ZM120-450v-390h330v390H120Zm390 330v-390h330v390H510Zm-390 0v-270h330v270H120Zm60-390h210v-270H180v270Zm390 330h210v-270H570v270Zm0-450h210v-150H570v150ZM180-180h210v-150H180v150Zm210-330Zm180-120Zm0 180ZM390-330Z",
+        d: "M208 40H48a24 24 0 0 0-24 24v112a24 24 0 0 0 24 24h72v16H96a8 8 0 0 0 0 16h64a8 8 0 0 0 0-16h-24v-16h72a24 24 0 0 0 24-24V64a24 24 0 0 0-24-24M48 56h160a8 8 0 0 1 8 8v80H40V64a8 8 0 0 1 8-8m160 128H48a8 8 0 0 1-8-8v-16h176v16a8 8 0 0 1-8 8",
       },
     ],
     class:
-      "mt-2 h-6 w-6 flex-shrink-0 fill-neutral-700 hs-tab-active:fill-orange-400 dark:fill-neutral-300 dark:hs-tab-active:fill-orange-300 md:h-7 md:w-7",
+      "mt-2 h-6 w-6 flex-shrink-0 fill-neutral-700 hs-tab-active:fill-teal-600 dark:fill-neutral-300 dark:hs-tab-active:fill-blue-600 md:h-7 md:w-7",
     width: 48,
     height: 48,
-    viewBox: "0 -960 960 960",
+    viewBox: "0 0 256 256",
   },
   house: {
     paths: [
@@ -74,7 +88,7 @@ export const Icons = {
       },
     ],
     class:
-      "h-6 w-6 flex-shrink-0 text-neutral-700 hs-tab-active:text-orange-400 dark:text-neutral-300 dark:hs-tab-active:text-orange-300 md:h-7 md:w-7",
+      "h-6 w-6 flex-shrink-0 text-neutral-700 hs-tab-active:text-teal-600 dark:text-neutral-300 dark:hs-tab-active:text-blue-600 md:h-7 md:w-7",
     width: 24,
     height: 24,
     viewBox: "0 0 24 24",
@@ -93,7 +107,7 @@ export const Icons = {
         d: "M12 19V5",
       },
     ],
-    class: "h-5 w-5 flex-shrink-0 text-orange-400 dark:text-orange-300",
+    class: "h-5 w-5 flex-shrink-0 text-teal-600 dark:text-blue-600",
     width: 24,
     height: 24,
     viewBox: "0 0 24 24",
@@ -396,6 +410,21 @@ export const Icons = {
     strokeLinejoin: "round",
     stroke: "currentColor",
   },
+  whatsapp: {
+    paths: [
+      {
+        d: "M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222c0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222c0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4l-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2c0-101.7 82.8-184.5 184.6-184.5c49.3 0 95.6 19.2 130.4 54.1c34.8 34.9 56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18c-5.1-1.9-8.8-2.8-12.5 2.8c-3.7 5.6-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4c-32.6-16.3-54-29.1-75.5-66c-5.7-9.8 5.7-9.1 16.3-30.3c1.8-3.7.9-6.9-.5-9.7c-1.4-2.8-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5c-3.2-.2-6.9-.2-10.6-.2c-3.7 0-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3c0 27.3 19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8c35.2 15.2 49 16.5 66.6 13.9c10.7-1.6 32.8-13.4 37.4-26.4c4.6-13 4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6",
+      },
+    ],
+    class:
+      "mt-1.5 h-6 w-6 flex-shrink-0 text-neutral-600 dark:text-neutral-400",
+    viewBox: "0 0 448 512",
+    fill: "none",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    stroke: "currentColor",
+  },
   envelopeOpen: {
     paths: [
       {
@@ -417,8 +446,7 @@ export const Icons = {
         d: "m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525",
       },
     ],
-    class:
-        "w-4 h-4 flex-shrink-0",
+    class: "w-4 h-4 flex-shrink-0",
     viewBox: "0 0 24 24",
     fill: "none",
     strokeWidth: "1.5",

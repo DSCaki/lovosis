@@ -5,13 +5,21 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://lovosis.com/",
   image: {
     domains: ["images.unsplash.com"],
   },
+  pages: ["./src/pages", "./src/pages/products/[id].astro"],
+  components: [
+    "./src/components",
+    "./src/components/sections/products/[id].astro",
+  ],
+
   // i18n: {
   //   defaultLocale: "en",
   //   locales: ["en", "fr"],
@@ -27,15 +35,17 @@ export default defineConfig({
     tailwind(),
     sitemap({
       i18n: {
-        defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+        defaultLocale: "en",
+        // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
         locales: {
-          en: "en", // The `defaultLocale` value must present in `locales` keys
+          en: "en",
+          // The `defaultLocale` value must present in `locales` keys
           fr: "fr",
         },
       },
     }),
     starlight({
-      title: "ScrewFast Docs",
+      title: "Lovosis Doc",
       defaultLocale: "root",
       // https://github.com/withastro/starlight/blob/main/packages/starlight/CHANGELOG.md
       // If no Astro and Starlight i18n configurations are provided, the built-in default locale is used in Starlight and a matching Astro i18n configuration is generated/used.
@@ -47,12 +57,31 @@ export default defineConfig({
           label: "English",
           lang: "en",
         },
-        de: { label: "Deutsch", lang: "de" },
-        es: { label: "Español", lang: "es" },
-        fa: { label: "Persian", lang: "fa", dir: "rtl" },
-        fr: { label: "Français", lang: "fr" },
-        ja: { label: "日本語", lang: "ja" },
-        "zh-cn": { label: "简体中文", lang: "zh-CN" },
+        de: {
+          label: "Deutsch",
+          lang: "de",
+        },
+        es: {
+          label: "Español",
+          lang: "es",
+        },
+        fa: {
+          label: "Persian",
+          lang: "fa",
+          dir: "rtl",
+        },
+        fr: {
+          label: "Français",
+          lang: "fr",
+        },
+        ja: {
+          label: "日本語",
+          lang: "ja",
+        },
+        "zh-cn": {
+          label: "简体中文",
+          lang: "zh-CN",
+        },
       },
       // https://starlight.astro.build/guides/sidebar/
       sidebar: [
@@ -66,22 +95,34 @@ export default defineConfig({
             ja: "クイックスタートガイド",
             "zh-cn": "快速入门指南",
           },
-          autogenerate: { directory: "guides" },
+          autogenerate: {
+            directory: "guides",
+          },
         },
         {
           label: "Tools & Equipment",
           items: [
-            { label: "Tool Guides", link: "tools/tool-guides/" },
-            { label: "Equipment Care", link: "tools/equipment-care/" },
+            {
+              label: "Tool Guides",
+              link: "tools/tool-guides/",
+            },
+            {
+              label: "Equipment Care",
+              link: "tools/equipment-care/",
+            },
           ],
         },
         {
           label: "Construction Services",
-          autogenerate: { directory: "construction" },
+          autogenerate: {
+            directory: "construction",
+          },
         },
         {
           label: "Advanced Topics",
-          autogenerate: { directory: "advanced" },
+          autogenerate: {
+            directory: "advanced",
+          },
         },
       ],
       social: {
@@ -93,7 +134,8 @@ export default defineConfig({
       components: {
         SiteTitle: "./src/components/ui/starlight/SiteTitle.astro",
         Head: "./src/components/ui/starlight/Head.astro",
-        MobileMenuFooter: "./src/components/ui/starlight/MobileMenuFooter.astro",
+        MobileMenuFooter:
+          "./src/components/ui/starlight/MobileMenuFooter.astro",
         ThemeSelect: "./src/components/ui/starlight/ThemeSelect.astro",
       },
       head: [
@@ -101,14 +143,14 @@ export default defineConfig({
           tag: "meta",
           attrs: {
             property: "og:image",
-            content: "https://screwfast.uk" + "/social.webp",
+            content: "https://lovosis.com/" + "/social.webp",
           },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: "https://screwfast.uk" + "/social.webp",
+            content: "https://lovosis.com/" + "/social.webp",
           },
         },
       ],
@@ -117,6 +159,7 @@ export default defineConfig({
       gzip: false,
       brotli: true,
     }),
+    react(),
   ],
   output: "static",
   experimental: {

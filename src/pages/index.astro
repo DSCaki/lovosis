@@ -2,6 +2,7 @@
 // Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
+import AboutSection from "@/components/sections/landing/About.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
@@ -9,15 +10,19 @@ import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
 import featureImage from "@images/features-image.avif";
 import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
+import solution1 from "@images/surveillance.webp";
+import solution2 from "@images/fabrication.webp";
+import solution3 from "@images/it.webp";
+import Product from "@/components/sections/products/Product.astro";
+import Tab from "@/components/sections/landing/Tab.astro";
+import Solution from "@/components/sections/landing/Solution.astro"
+
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -28,18 +33,13 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
-
+  
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
+    title=`Total Surveillance & IT Solution Provider <span
+        class="text-blue-600 dark:text-blue-600">In Dubai</span>`
+    subTitle="Your trusted partner for comprehensive IT and surveillance solutions. Enhancing security and efficiency across Dubai."
     primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
+    primaryBtnURL="/about"
     secondaryBtn="Contact Sales Team"
     secondaryBtnURL="/contact"
     withReview={true}
@@ -50,96 +50,89 @@ const avatarSrcs: Array<string> = [
     src={heroImage}
     alt="Stack of ScrewFast product boxes containing assorted hardware tools"
   />
-
   <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+    title="Trusted by Leading Brands"
+    subTitle="Partners with industry leaders, delivering excellence and innovation in our services."
   />
+  <AboutSection 
+    Abouttitle=`Know About <span
+    class="text-blue-600 dark:text-teal-600">lovosis</span>`
+    AboutsubTitle="At Lovosis, we specialize in cutting-edge surveillance and IT solutions, positioned as a leading provider in Dubai. Our expertise focuses on delivering robust security and technological efficiency to our clients. While we offer custom fabrication, our core strength lies in comprehensive surveillance systems designed to meet diverse and dynamic needs. Trust Lovosis to enhance and secure your digital landscape with precision and innovation."
+    AboutprimaryBtn="Learn More"
+    AboutprimaryBtnURL="/about"
+    statistics={[
+    {
+      count: "7k+",
+      description:
+        "As Dubai's leading provider of advanced surveillance and IT solutions, we serve over 7k+ customers.",
+    },
+    {
+      count: "35%",
+      description:
+        "Lovosis solutions have significantly boosted project efficiency, revolutionizing industry standards.",
+    },
+    {
+      count: "15.3%",
+      description:
+        "Our advanced technology and efficient strategies have reduced maintenance costs for long-term clients",
+    },
+    {
+      count: "2x",
+      description: "Experience assembly at twice Speed up assembly with our advanced fastening solutions.",
+    },
+  ]}
+  />
+ 
 
   <FeaturesGeneral
     title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    subTitle="Lovosis, a leading custom fabrication and surveillance solution provider in Dubai, partners with top brands like Hikvision, UNV, and Dahua. We offer cutting-edge security systems featuring advanced technology for optimal protection and monitoring. Trust Lovosis for innovative and reliable surveillance solutions tailored to your needs."
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
-    features={features}
+    alt="Lovosis Brands"
   />
+
+  <Product />
+  
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    title=`<span class="text-blue-600 dark:text-teal-600">Lovosis</span>'s offerings solution to perfectly suit your Needs.`
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
-        content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
-        svg: "tools",
-        src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
-        first: true,
+          heading: "Surveillance Solution",
+          content:
+            "Our surveillance solutions at Lovosis with Wise-ISP 5th Gen Night Vision technology, ensuring real-time security monitoring and data protection tailored to meet the specific needs of your business",
+          svg: "cctv",
+          src: solution1,
+          alt: "solution-1",
+          first: true,
       },
       {
-        heading: "Intuitive Dashboards",
-        content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
-        second: true,
+          heading: "Custom Fabrication",
+          content:
+            "At Lovosis, our custom fabrication solutions are utilize advanced technology to meet your unique requirements, ensuring optimal performance and security for your specific needs.",
+          svg: "tools",
+          src: solution2,
+          alt: "solution-2",
+          second: true,
       },
       {
-        heading: "Robust Features",
-        content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
-        svg: "house",
-        src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+          heading: "IT Solution",
+          content:
+            "At Lovosis, we provide innovative IT solutions that optimize performance and security, tailored to meet the unique needs of your business stays ahead in a fast-paced digital world.",
+          svg: "dashboard",
+          src: solution3,
+          alt: "solution-3",
       },
-    ]}
+      ]}
   />
-
-  <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
-    ;
-    testimonials={[
-      {
-        content:
-          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-        author: "Samantha Ruiz",
-        role: "Chief Operating Officer | ConstructIt Inc.",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      },
-    ]}
-    statistics={[
-      {
-        count: "70k+",
-        description:
-          "customers equipped — from DIY to major construction firms",
-      },
-      {
-        count: "35%",
-        description:
-          "uptick in project efficiency with ScrewFast tools and services",
-      },
-      {
-        count: "15.3%",
-        description:
-          "reduction in maintenance costs reported by long-term clients",
-      },
-      {
-        count: "2x",
-        description: "quicker assembly using innovative fastening solutions",
-      },
-    ]}
-  />
-
-  <PricingSection pricing={pricing} />
-
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title=`Let's Build <span class="text-blue-600 dark:text-teal-600">Together</span>`
+    subTitle="We're here to help you with anything you need."
   />
+
+  <FAQ title=`Frequently<br /><span class="text-blue-600 dark:text-teal-600">asked questions</span>` faqs={faqs} />
+  <!--FAQ content in Components/data_files/faq.jason -->
+
+
 </MainLayout>

@@ -1,0 +1,64 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import productsData from './new.json';  // Adjust the path as necessary
+
+// Define the Product type
+type Product = {
+  id: number;
+  title: string;
+  shortdes: string;
+  desc: string;
+  img: string;
+  cat1: string;
+  cat2: string;
+  cat3: string;
+  category: string;
+};
+
+// Extract the products array from the imported data
+const products: Product[] = productsData.products;
+
+// Define getStaticPaths to generate paths for all product IDs
+export async function getStaticPaths() {
+  return {
+    paths: products.map((product) => ({
+      params: { id: product.id.toString() },
+    })),
+    fallback: false,
+  };
+}
+
+// Get the ID from the URL parameters using Astro
+const { id } = Astro.params;
+
+if (!id || typeof id !== 'string') {
+  throw new Error('Product ID is not valid');
+}
+
+// Find the product with the matching ID
+const product = products.find((product) => product.id === parseInt(id));
+
+if (!product) {
+  throw new Error(`Product with ID ${id} not found`);
+}
+---
+
+<MainLayout>
+  {product ? (
+    <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+      <div class="flex flex-col md:flex-row gap-8">
+        <img src={product.img} alt={product.title} class="w-full h-96 object-contain rounded-xl bg-white"/>
+        <div>
+          <h1 class="text-3xl font-bold dark:text-teal-600">{product.title}</h1>
+          <p class="mt-2 text-gray-500 dark:text-neutral-300">{product.shortdes}</p>
+          <div class="mt-4">{product.desc}</div>
+          <p class="mt-4 text-gray-700 dark:text-neutral-300">Category: {product.category}</p>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+      <p class="text-center text-gray-500 dark:text-neutral-300">Product not found.</p>
+    </section>
+  )}
+</MainLayout>
