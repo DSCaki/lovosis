@@ -64,15 +64,14 @@ interface Props {
     width: var(--width);
     height: var(--height);
     position: absolute;
+    align-items: center;
+    justify-content: center;
     left: 100%;
     animation: autoRun 10s linear infinite;
     transition: filter 0.5s;
     animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
 }
-.slider .list .item img{
-    width: 100%;
-    height: auto;
-}
+
 @keyframes autoRun{
     from{
         left: 100%;
@@ -141,16 +140,16 @@ interface Props {
   <div class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24">
     <div class="slider" style="--width: 100px; --height: 50px; --quantity: 10;">
       <div class="list">
-        <div class="item" style="--position: 1"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 2"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 3"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 4"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 5"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 6"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 7"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 8"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 9"><img src="pictures/logo.png" alt="client1"></div>
-        <div class="item" style="--position: 10"><img src="pictures/logo.png" alt="client1"></div>
+        <div class="item" style="--position: 1"><img src="pictures/Brand Logo/hikvision.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 2"><img src="pictures/Brand Logo/dahua.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 3"><img src="pictures/Brand Logo/ewind.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 4"><img src="pictures/Brand Logo/Toshiba.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 5"><img src="pictures/Brand Logo/western.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 6"><img src="pictures/Brand Logo/hikvision.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 7"><img src="pictures/Brand Logo/dahua.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 8"><img src="pictures/Brand Logo/ewind.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 9"><img src="pictures/Brand Logo/Toshiba.png" alt="client1" class="w-40 h-5"></div>
+        <div class="item" style="--position: 10"><img src="pictures/Brand Logo/western.png" alt="client1" class="w-40 h-5"></div>  
       </div>
     </div>
   </div>
