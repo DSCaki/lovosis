@@ -11,25 +11,15 @@ import react from "@astrojs/react";
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://lovosis.com/",
-  image: {
+  /*image: {
     domains: ["images.unsplash.com"],
   },
   pages: ["./src/pages", "./src/pages/products/[id].astro"],
   components: [
     "./src/components",
-    "./src/components/sections/products/[id].astro",
-  ],
+   "./src/components/sections/products/[id].astro",
+  ],*/
 
-  // i18n: {
-  //   defaultLocale: "en",
-  //   locales: ["en", "fr"],
-  //   fallback: {
-  //     fr: "en",
-  //   },
-  //   routing: {
-  //     prefixDefaultLocale: false,
-  //   },
-  // },
   prefetch: true,
   integrations: [
     tailwind(),
